@@ -15,6 +15,8 @@ class user {
     $this->name['registration']['ru'] = 'Придумайте псевдоним';
     $this->name['auth']['ru'] = 'Введите ваш псевдоним';
     $this->name['display']['ru'] = 'Псевдоним';
+    $this->name['error']['registration']['ru'] = 'псевдоним уже занят';
+    $this->name['error']['auth']['ru'] = 'в доступе отказано';
 
     $this->password['type'] = 'password';
     $this->password['jsValidation'] = 'passwordsMatch';
@@ -26,6 +28,8 @@ class user {
     $this->password['registration']['ru'] = 'Придумайте пароль';
     $this->password['auth']['ru'] = 'Введите ваш пароль';
     $this->password['hidden'] = true;
+    $this->password['error']['registration']['ru'] = 'пароли не совпадают';
+    $this->password['error']['auth']['ru'] = 'в доступе отказано';
 
     $this->origin['type'] = 'city';
     $this->origin['registration']['ru'] = 'Откуда вы?';

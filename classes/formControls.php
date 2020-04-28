@@ -8,7 +8,7 @@ class formControls {
     $html = '
     <div class="form-group">
       <label for="exampleInputEmail1">' . $properties[$mode]['ru'] . '</label>';
-      $html .= (isset($displayError)) ? '<span style="float: right; color: darkred; display: ;">псевдоним уже занят</span>' : '';
+      $html .= (isset($displayError)) ? '<span style="float: right; color: darkred; display: ;">' . $properties['error'][$mode]['ru'] . '</span>' : '';
       $defaultValue = (isset($displayError)) ? $_POST['nickname'] : '';
       $html .= '<input type="text" class="form-control" value="' . $defaultValue . '" name="' . $properties['type'] . '" required/>
     </div>';
@@ -16,8 +16,10 @@ class formControls {
   }
 
   function password($properties, $mode) {
+    global $displayError;
+
     if ($mode == 'registration') {
-      return '
+      $html =  '
       <div class="form-group">
         <label for="exampleInputEmail1">' . $properties[$mode]['ru'] . '</label>
         <span style="float: right; color: darkred; display: none;" class="' . $properties['badgesClass'] . '">пароли не совпадают</span>
@@ -30,13 +32,15 @@ class formControls {
         <div class="pwstrength_viewport_progress" style="height: 5px;"></div>
       </div>';
     } else {
-      return '
+      $html = '
       <div class="form-group">
-        <label for="exampleInputEmail1">' . $properties['auth']['ru'] . '</label>
-        <span style="float: right; color: darkred; display: none;" class="' . $properties['badgesClass'] . '">пароли не совпадают</span>
-        <input type="password" class="form-control ' . $properties['fieldsClass'] . '" name="' . $properties['type'] . '" required/>
+        <label for="exampleInputEmail1">' . $properties['auth']['ru'] . '</label>';
+      $html .= isset($displayError) ? '<span style="float: right; color: darkred;" class="' . $properties['badgesClass'] . '">' . $properties['error'][$mode]['ru'] . '</span>' : '';
+      $html .= '<input type="password" class="form-control ' . $properties['fieldsClass'] . '" name="' . $properties['type'] . '" required/>
       </div>';
     }
+
+    return $html;
   }
 
   function city($properties, $mode) {

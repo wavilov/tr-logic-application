@@ -11,10 +11,13 @@ $formControls = new formControls();
 $formValidators = new formValidators();
 $displays = new displays();
 
+$mode = (isset($_GET['mode'])) ? $_GET['mode'] : 'registration';
+
+if (file_exists('actions/' . $mode . '.php')) {
+  require 'actions/' . $mode . '.php';
+}
 
 include 'fragments/header.php';
-
-$mode = (isset($_GET['mode'])) ? $_GET['mode'] : 'registration';
 
 include 'fragments/navigation.php';
 
