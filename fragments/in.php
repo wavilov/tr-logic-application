@@ -1,6 +1,5 @@
 <div class="container" style="background-color: white; padding: 20px; padding-bottom: 20px;">
   <?php
-  session_start();
   $data = $db->getObject('SELECT * FROM users WHERE id = ' . $_SESSION['uid']);
   $html = '';
   foreach ($user->properties as $property) {

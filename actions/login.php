@@ -15,7 +15,6 @@ if ($fieldsSet == count($user->authBy)) {
 
   $me = $db->getObject($query);
   if ($me) {
-    session_start();
     $_SESSION['uid'] = $me->id;
     header('Location: ?mode=in');
   } else {

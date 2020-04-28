@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require 'classes/user.php';
 require 'classes/database.php';
 require 'classes/formControls.php';

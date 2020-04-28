@@ -47,7 +47,6 @@ if ($fieldsSet == count($user->properties)) {
           && $imageFileType == "gif") {
             $target_file = $target_dir . $db->insertId() . '.' . $imageFileType;
             move_uploaded_file($_FILES[$property['type']]["tmp_name"], $target_file);
-            session_start();
             $_SESSION['uid'] = $db->insertId();
             header('Location: /?mode=in');
         }
