@@ -13,7 +13,7 @@
   }
   echo $html;
   ?>
-  <a href="?mode=out">
+  <a href="?action=out">
     <input type="button" class="btn-primary form-control" style="margin-top: 40px;" value="<?= $languages->buttons['exit'][$lang] ?>">
   </a>
 

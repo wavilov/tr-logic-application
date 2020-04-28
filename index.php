@@ -1,4 +1,7 @@
 <?php
+if (isset($_GET['action'])) {
+  session_abort();
+}
 session_start();
 
 require 'classes/user.php';
