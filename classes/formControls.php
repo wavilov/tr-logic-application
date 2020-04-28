@@ -49,7 +49,7 @@ class formControls {
     <div class="form-group">
       <label for="exampleInputEmail1">' . $properties[$mode][$lang] . '</label>
       <select class="custom-select" name="' . $properties['type'] . '" required>';
-        $cities = $db->getObjects('SELECT * FROM cities');
+        $cities = $db->getObjects('SELECT id, name_' . $lang . ' as name FROM cities');
         foreach ($cities as $city) {
           $html .= '<option value="' . $city->id . '">' . $city->name . '</option>';
         }

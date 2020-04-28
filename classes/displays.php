@@ -18,7 +18,7 @@ class displays {
     return '
     <div class="row">
       <div class="col">' . $properties['display'][$lang] . '</div>
-      <div class="col">' . $db->getObject('SELECT name FROM users, cities WHERE cities.id = users.city AND users.id = ' . $data->id)->name . '</div>
+      <div class="col">' . $db->getObject('SELECT name_' . $lang . ' as name FROM users, cities WHERE cities.id = users.city AND users.id = ' . $data->id)->name . '</div>
     </div>';
   }
 
