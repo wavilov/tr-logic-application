@@ -33,7 +33,7 @@
 <body style="background-color: darkgray; background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;">
 
 <div class="container-fluid" style="width: 500px; margin-top: 50px; margin-bottom: 50px; background-color: lightgray; padding: 20px; border-radius: 5px;">
-  <div style="height: 150px; background-image: url('https://itprojects.management/img/back1.jpg'); color: white; padding: 20px;">
+  <div style="height: 150px; background-image: url('/assets/back1.jpg'); color: white; padding: 20px;">
     <h1>TR Logic</h1>
     <h3><?= $languages->header[$lang] ?></h3>
   </div>
