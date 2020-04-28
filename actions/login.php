@@ -9,7 +9,8 @@ foreach ($user->authBy as $property) {
 if ($fieldsSet == count($user->authBy)) {
   $query = 'SELECT id FROM users WHERE ';
   foreach ($user->authBy as $property) {
-    $query .= $property['type'] . ' = "' . $_POST[$property['type']] . '" AND ';
+    $query .= $property['type'] . ' = ';
+    $query .= isset($property['modificator']) ? $property['modificator'] . '("' . $_POST[$property['type']] . '") AND ' : '"' . $_POST[$property['type']] . '" AND ';
   }
   $query = substr($query, 0, strlen($query) - 5);
 

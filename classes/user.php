@@ -24,6 +24,7 @@ class user {
     $this->name['error']['auth']['en'] = 'access denied';
 
     $this->password['type'] = 'password';
+    $this->password['modificator'] = 'MD5';
     $this->password['jsValidation'] = 'passwordsMatch';
     $this->password['phpValidation'] = function() {
       return $_POST['password'] == $_POST['password2'];
