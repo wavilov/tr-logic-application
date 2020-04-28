@@ -6,7 +6,7 @@ class database {
 
   function __construct() {
     $this->db = mysqli_connect('database', 'tr', 'logic', 'tr-logic');
-    mysqli_query($this->db, 'SET CHARSET utf8mb4');
+    mysqli_query($this->db, 'SET CHARSET utf8');
   }
 
   function exec($sql) {

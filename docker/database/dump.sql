@@ -30,7 +30,7 @@ CREATE TABLE `cities` (
   `name_ru` char(50) DEFAULT NULL,
   `name_en` char(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `cities` WRITE;
 /*!40000 ALTER TABLE `cities` DISABLE KEYS */;
@@ -59,7 +59,7 @@ CREATE TABLE `users` (
   `city` smallint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `nickname` (`nickname`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
