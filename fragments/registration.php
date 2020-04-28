@@ -8,7 +8,7 @@ require 'actions/registration.php';
     echo $formControls->{$property['type']}($property, 'registration');
   }
   ?>
-  <input type="submit" class="btn-primary form-control" style="margin-top: 40px;" value="Зарегистрироваться">
+  <input type="submit" class="btn-primary form-control" style="margin-top: 40px;" value="<?= $languages->buttons['registration'][$lang] ?>">
 </form>
 
 <script>

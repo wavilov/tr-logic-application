@@ -6,6 +6,6 @@
   }
   ?>
 
-  <input type="submit" class="btn-primary form-control" style="margin-top: 40px;" value="Войти">
+  <input type="submit" class="btn-primary form-control" style="margin-top: 40px;" value="<?= $languages->buttons['login'][$lang] ?>">
 
 </form>

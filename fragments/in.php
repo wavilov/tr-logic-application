@@ -15,7 +15,7 @@
   echo $html;
   ?>
   <a href="?mode=out">
-    <input type="button" class="btn-primary form-control" style="margin-top: 40px;" value="Выход">
+    <input type="button" class="btn-primary form-control" style="margin-top: 40px;" value="<?= $languages->buttons['exit'][$lang] ?>">
   </a>
 
 </div>

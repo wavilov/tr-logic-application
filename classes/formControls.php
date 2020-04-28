@@ -22,12 +22,12 @@ class formControls {
       $html =  '
       <div class="form-group">
         <label for="exampleInputEmail1">' . $properties[$mode][$lang] . '</label>
-        <span style="float: right; color: darkred; display: none;" class="' . $properties['badgesClass'] . '">пароли не совпадают</span>
+        <span style="float: right; color: darkred; display: none;" class="' . $properties['badgesClass'] . '">' . $properties['error'][$mode][$lang] . '</span>
         <input type="password" class="form-control ' . $properties['fieldsClass'] . '" name="' . $properties['type'] . '" required/>
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Повторите пароль</label>
-        <span style="float: right; color: darkred; display: none;" class="' . $properties['badgesClass'] . '">пароли не совпадают</span>
+        <label for="exampleInputEmail1">' . $properties[$mode]['second'][$lang] . '</label>
+        <span style="float: right; color: darkred; display: none;" class="' . $properties['badgesClass'] . '">' . $properties['error'][$mode][$lang] . '</span>
         <input type="password" class="form-control ' . $properties['fieldsClass'] . '" name="' . $properties['type'] . '2" required/>
         <div class="pwstrength_viewport_progress" style="height: 5px;"></div>
       </div>';

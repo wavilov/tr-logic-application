@@ -31,6 +31,8 @@ class user {
     $this->password['fieldsClass'] = 'password';
     $this->password['badgesClass'] = 'passwordError';
     $this->password['registration']['ru'] = 'Придумайте пароль';
+    $this->password['registration']['second']['ru'] = 'Повторите пароль';
+    $this->password['registration']['second']['en'] = 'Retype password';
     $this->password['registration']['en'] = 'Type new password';
     $this->password['auth']['ru'] = 'Введите ваш пароль';
     $this->password['auth']['en'] = 'Enter your password';

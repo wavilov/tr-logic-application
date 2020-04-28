@@ -4,14 +4,14 @@ require 'classes/database.php';
 require 'classes/formControls.php';
 require 'classes/formValidators.php';
 require 'classes/displays.php';
-require 'classes/constants.php';
+require 'classes/languages.php';
 
 $db = new database();
 $user = new user();
 $formControls = new formControls();
 $formValidators = new formValidators();
 $displays = new displays();
-$constants = new constants();
+$languages = new languages();
 
 if (isset($_GET['lang'])) {
   setcookie('lang', $_GET['lang'], time() + 30*24*60*60);
