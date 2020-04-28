@@ -30,7 +30,7 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 </head>
-<body style="background-color: darkgray; background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;">
+<body style="background-color: darkgray; background: url(/assets/back.jpg) no-repeat center center fixed;">
 
 <div class="container-fluid" style="width: 500px; margin-top: 50px; margin-bottom: 50px; background-color: lightgray; padding: 20px; border-radius: 5px;">
   <div style="height: 150px; background-image: url('/assets/back1.jpg'); color: white; padding: 20px;">
