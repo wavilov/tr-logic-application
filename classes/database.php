@@ -5,7 +5,7 @@ class database {
   var $db;
 
   function __construct() {
-    $this->db = mysqli_connect('localhost', 'root', '1111', 'tr-logic');
+    $this->db = mysqli_connect('database', 'tr', 'logic', 'tr-logic');
     mysqli_query($this->db, 'SET CHARSET utf8mb4');
   }
 
