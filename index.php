@@ -13,6 +13,12 @@ $formValidators = new formValidators();
 $displays = new displays();
 $constants = new constants();
 
+if (isset($_GET['lang'])) {
+  setcookie('lang', $_GET['lang'], time() + 30*24*60*60);
+  $_COOKIE['lang'] = $_GET['lang'];
+}
+
+$lang = (isset($_COOKIE['lang'])) ? $_COOKIE['lang'] : 'ru';
 $mode = (isset($_GET['mode'])) ? $_GET['mode'] : 'registration';
 
 if (file_exists('actions/' . $mode . '.php')) {

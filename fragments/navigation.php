@@ -15,7 +15,9 @@ if ($mode == 'in') { ?>
       foreach ($constants->languages as $language) {
         $index++;
         ?>
-        <img src="assets/<?= $language ?>.jpg" style="height: 15px; <?= ($index < count($constants->languages)) ? 'margin-right: 10px;' : '' ?>"/>
+        <a href="?lang=<?= $language ?>&mode=<?= $mode ?>">
+          <img src="assets/<?= $language ?>.jpg" style="height: 15px; <?= ($index < count($constants->languages)) ? 'margin-right: 10px;' : '' ?>" alt="<?= $language ?>"/>
+        </a>
       <?php } ?>
     </li>
   </ul>
