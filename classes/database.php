@@ -6,7 +6,7 @@ class database {
 
   function __construct() {
     $this->db = mysqli_connect('database', 'tr', 'logic', 'tr-logic');
-    mysqli_query($this->db, 'SET CHARSET utf8');
+    mysqli_set_charset($this->db, 'utf8');
   }
 
   function exec($sql) {
@@ -29,6 +29,10 @@ class database {
       }
     }
     return false;
+  }
+
+  function escape($sql) {
+    return mysqli_real_escape_string($this->db, $sql);
   }
 
   function getObjects($sql) {

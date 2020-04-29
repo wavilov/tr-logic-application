@@ -30,7 +30,7 @@ if ($fieldsSet == count($user->properties)) {
   $query = substr($query, 0, strlen($query) - 2) . ') VALUES (';
   foreach ($user->properties as $property) {
     if (!isset($property['isFile'])) {
-      $query .= (isset($property['modificator'])) ? $property['modificator'] . '("' . $_POST[$property['type']] . '"), ' : '"' . $_POST[$property['type']] . '", ';
+      $query .= (isset($property['modificator'])) ? $property['modificator'] . '("' . $db->escape($_POST[$property['type']]) . '"), ' : '"' . $db->escape($_POST[$property['type']]) . '", ';
     }
   }
   $query = substr($query, 0, strlen($query) - 3) . '")';
